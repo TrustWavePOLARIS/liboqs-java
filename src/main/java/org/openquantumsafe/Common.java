@@ -33,6 +33,8 @@ public class Common {
             System.loadLibrary("oqs-jni");
         // Otherwise load the library from the liboqs-java.jar
         } catch (UnsatisfiedLinkError e) {
+            e.printStackTrace();
+
             String libName = "llliboqs-jni.so";
             if (Common.isLinux()) {
                 libName = "liboqs-jni.so";
